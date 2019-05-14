@@ -1,0 +1,7 @@
+{
+  "name": "Essensplan",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

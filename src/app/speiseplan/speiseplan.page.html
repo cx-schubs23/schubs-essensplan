@@ -1,0 +1,13 @@
+<ion-content>
+  <!-- TODO: Schöneres Layouting für Anzeige von Gerichten -->
+  <ul>
+    <li *ngFor="let gericht of hauptgerichte">
+      {{ gericht.Bezeichnung }} ({{ gericht.Preis }})
+    </li>
+
+    <li *ngFor="let gericht of beilagen">
+      {{ gericht.Bezeichnung }} ({{ gericht.Preis }})
+    </li>
+  </ul>
+
+</ion-content>
