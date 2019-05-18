@@ -1,0 +1,69 @@
+.Karte {
+
+    @media screen and (max-width: 2000px) {
+        width: calc(33% - 20px);
+        
+    }
+    
+
+    @media screen and (max-width: 1500px) {
+        width: calc(45% - 20px);
+        
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: calc(50% - 20px);
+        
+    }
+
+    @media screen and (max-width: 500px) {
+        width: calc(100% - 20px);
+        
+    }
+
+    
+
+    display: inline-block;
+    
+}
+
+
+.Bild{
+    
+    height: 400px;
+    
+    
+    object-fit: cover;
+}
+
+.Preis{
+    color:green;
+    text-align: right;
+    font-size: 170%;
+}
+
+.Header{
+    color:blue;
+}
+
+.Text{
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    position:relative;
+     width: 50%;
+    }
+    .box:before {
+    content: "";
+    display:block;
+    padding-top: 100%;
+    }
