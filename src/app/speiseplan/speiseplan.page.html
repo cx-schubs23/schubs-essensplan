@@ -1,30 +1,45 @@
 <ion-content>
 
+<div class="Box2">
+  <ion-card class="card">
+      <img src="../../assets/hotel-vivendi.svg" class="Bild2">
+      <header class="Text4">Speiseplan</header>
+    
+    <ion-item class="Text3" slot="end">
+        <ion-label >≡</ion-label>
+        <ion-datetime displayFormat="DD MM YYYY"  placeholder="" [(ngModel)]="selectedDate"></ion-datetime>
+       </ion-item>
+  </ion-card>
 
-  <h1>Speiseplan</h1>
+</div>          
+        
 
+  <div class="Unten">
   <div id="container">
-      <div class=“box“>
+    <div class="box">
 
 
-    <ion-card *ngFor="let gericht of hauptgerichte" class="Karte">
-      <ion-card-header>
-        <ion-img class="Bild" src="{{ gericht.ImagePfad }}"></ion-img>
+      <ion-card *ngFor="let gericht of hauptgerichte" class="Karte">
+        <ion-card-header>
+          <ion-img class="Bild" src="{{ gericht.ImagePfad }}"></ion-img>
+          <ion-card-title class="Text">{{ gericht.Bezeichnung }}</ion-card-title>
+          <ion-card-subtitle class="Text">{{ gericht.Kategorie }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content class="Preis">
+          {{ gericht.Preis | currency:'EUR':true }}
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card *ngFor="let gericht of beilagen" class="Karte">
         <ion-card-title class="Text">{{ gericht.Bezeichnung }}</ion-card-title>
         <ion-card-subtitle class="Text">{{ gericht.Kategorie }}</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content class="Preis">
-        {{ gericht.Preis | currency:'EUR':true }}
-      </ion-card-content>
-    </ion-card>
+        <ion-card-content class="Preis">{{ gericht.Preis | currency:'EUR':true }}</ion-card-content>
+      </ion-card>
 
-    <ion-card *ngFor="let gericht of beilagen" class="Karte">
-      <ion-card-title class="Text">{{ gericht.Bezeichnung }}</ion-card-title>
-      <ion-card-content class="Preis">{{ gericht.Preis | currency:'EUR':true }}</ion-card-content>
-    </ion-card>
-
+    </div>
   </div>
   </div>
+  
 
 
 

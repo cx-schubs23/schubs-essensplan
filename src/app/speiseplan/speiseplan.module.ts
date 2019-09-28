@@ -12,6 +12,12 @@ const routes: Routes = [
   }
 ];
 
+import {BrowserAnimationsModule} from 
+    '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule, MatTableModule, MatPaginatorModule, MatSortModule } 
+from '@angular/material';
+
 @NgModule({
   imports: [
     CommonModule,
